@@ -1,0 +1,11 @@
+<h3>Details</h3>
+<button class="btn btn-primary" (click)="onDisplayDetails()">Display details</button>
+<p *ngIf="isShowDetails()">Secrect password: 'Tuna-334'</p>
+<hr>
+<h3>History of clicks</h3>
+<ul>
+    <li *ngFor="let entry of logs; let i = index"
+        [ngClass]="{'even': i % 2 === 0, 'uneven': i % 2 !== 0}">
+        {{ entry }}
+    </li>
+</ul>
